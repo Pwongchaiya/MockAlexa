@@ -15,4 +15,11 @@ public class Alexa {
   public void lightStatus(){
     System.out.println("The Light is: "+lightSwitch.getState());
   }
+    public void setLight(String bool){
+    lightSwitch.setState(bool);
+  }
+
+  public void setDoor(String bool){
+    door.setState(bool);
+  }
 }
