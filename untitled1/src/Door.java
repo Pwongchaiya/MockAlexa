@@ -1,27 +1,25 @@
 public class Door {
 
-  private String state;
+  private Boolean state;
 
-  public Door(String state) {
+  public Door(Boolean state) {
     this.state = state;
   }
 
-  public String getState() {
+  public Boolean getState() {
     return state;
   }
 
-  public void setState(String state) {
+  public void setState(Boolean state) {
     this.state = state;
   }
 
-  public void setDoorStatus(String s){
-    if ("open".equalsIgnoreCase(s)){
+  public void setDoorStatus(Boolean s){
+    if (s){
       System.out.println("The door is open");
-      setState("open");
-
-    }else if(s.equalsIgnoreCase("closed")){
+    }else{
       System.out.println("The door closed");
-      setState("closed");
     }
   }
 }
+
