@@ -3,7 +3,7 @@ public class LivingRoomLight extends LightSwitch{
   private int BrightnessLvl;
 
   public LivingRoomLight() {
-    super("on");
+    super(true);
     BrightnessLvl = 100;
   }
 
@@ -17,12 +17,11 @@ public class LivingRoomLight extends LightSwitch{
   }
 
   public void setLightSwitch(){
-    if (getState().equalsIgnoreCase("on")){
+    if (getState()){
       System.out.println("Lights are " + getState() + " and bright brightness is at "+ getBrightnessLvl()+"%");
-    }else if(getState().equalsIgnoreCase("off")){
+    }else{
       setBrightnessLvl(0);
       System.out.println("Lights are off");
     }
   }
-
 }
