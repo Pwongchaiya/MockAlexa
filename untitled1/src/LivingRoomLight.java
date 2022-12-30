@@ -18,7 +18,7 @@ public class LivingRoomLight extends LightSwitch{
 
   public void setLightSwitch(){
     if (getState()){
-      System.out.println("Lights are " + getState() + " and bright brightness is at "+ getBrightnessLvl()+"%");
+      System.out.println("Lights are " + getState() + " and brightness level is at "+ getBrightnessLvl()+"%");
     }else{
       setBrightnessLvl(0);
       System.out.println("Lights are off");
