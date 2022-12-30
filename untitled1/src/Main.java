@@ -4,14 +4,13 @@ public class Main {
     lightSwitch.setLightSwitch();
     lightSwitch.setBrightnessLvl(80);
     lightSwitch.setLightSwitch();
-    lightSwitch.setState("off");
+    lightSwitch.setState(false);
     lightSwitch.setLightSwitch();
 
-    Alexa alexa = new Alexa(new LightSwitch("off"),new Door("open"));
-    alexa.setLight("on");
-    alexa.setDoor("closed");
+    Alexa alexa = new Alexa(new LightSwitch(false),new Door(true));
+    alexa.setLight(true);
+    alexa.setDoor(false);
     alexa.lightStatus();
     alexa.doorStatus();
-
   }
 }
