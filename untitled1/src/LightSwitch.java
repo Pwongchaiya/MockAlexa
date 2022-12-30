@@ -1,26 +1,25 @@
 public class LightSwitch {
-  private String state;
+  private Boolean state;
 
-  public LightSwitch (String state) {
+  public LightSwitch (Boolean state) {
     this.state = state;
   }
 
-  public String getState() {
+  public Boolean getState() {
     return state;
   }
 
-  public void setState(String state) {
+  public void setState(Boolean state) {
     this.state = state;
   }
 
-  public void setLightSwitch(String o){
-    if (o.equalsIgnoreCase("on")){
+  public void setLightSwitch(Boolean o){
+    if (o){
       System.out.println("Lights are on");
-      this.setState("on");
-    }else if(o.equalsIgnoreCase("off")){
+    }else {
       System.out.println("Lights are off");
-      this.setState("off");
     }
   }
 
 }
+
